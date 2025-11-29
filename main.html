@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+  <title>Geosense - Горный туризм Азербайджана</title>
+  
+  <!-- Локальные шрифты Circular (скачайте с cdn.jotfor.ms/fonts/circular/ или замените на Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Все CSS из оригинала (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jotfor.ms/fonts/?family=Circular:400:500:700">
+  <link rel="stylesheet" href="https://cdn.jotfor.ms/s/static/5d5b93ae5ba/css/styles/payment/payment_styles.css">
+  <link rel="stylesheet" href="https://cdn.jotfor.ms/s/static/5d5b93ae5ba/css/styles/payment/payment_feature.css">
+  <link rel="stylesheet" href="https://cdn.jotfor.ms/s/static/5d5b93ae5ba/css/styles/payment/payment_productlist_layout.css">
+  <link href="https://cdn.jotfor.ms/s/portal/57d9c8c2bc7/static/css/jotform.css.css" rel="stylesheet">
+  <link href="https://cdn.jotfor.ms/s/portal/57d9c8c2bc7/static/css/71227.css" rel="stylesheet">
+  <link href="https://cdn.jotfor.ms/s/portal/57d9c8c2bc7/static/css/index.css" rel="stylesheet">
+  
+  <style>
+    /* Кастомные стили для оффлайн-версии */
+    :root {
+      --primary: #0A1551;
+      --accent: #FFF1C5;
+      --accent-dark: #6A1C00;
+      --bg: #F3F3FE;
+      --card-bg: #ffffff;
+      --border: #D3DCEF;
+    }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #F3F3FE 0%, #DFDFFF 100%); margin: 0; padding: 0; }
+    .app-container { max-width: 1200px; margin: 0 auto; min-height: 100vh; }
+    .page { display: none; padding: 20px; }
+    .page.active { display: block; }
+    .header { background: linear-gradient(135deg, #DFDFFF 0%, #0A1551 100%); color: white; padding: 20px; text-align: center; border-radius: 20px; margin-bottom: 20px; }
+    .heading-accent { background: var(--accent); color: var(--accent-dark); padding: 20px; border-radius: 15px; text-align: center; margin: 20px 0; }
+    .tour-card { background: white; border: 2px solid var(--border); border-radius: 15px; padding: 20px; margin: 15px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .tour-card h3 { color: var(--primary); margin: 0 0 10px 0; }
+    .tour-price { font-size: 1.5em; font-weight: bold; color: var(--primary); }
+    .map-container { height: 400px; background: #f0f0f0; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: var(--primary); }
+    .slider { position: relative; height: 380px; overflow: hidden; border-radius: 15px; margin: 20px 0; }
+    .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s; }
+    .slide.active { opacity: 1; }
+    .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .testimonial { background: var(--accent); padding: 20px; border-radius: 15px; border-left: 5px solid var(--accent-dark); }
+    .nav-tabs { display: flex; background: white; border-radius: 50px; padding: 5px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    .nav-tab { flex: 1; padding: 15px; text-align: center; background: none; border: none; border-radius: 40px; cursor: pointer; font-weight: 500; transition: all 0.3s; }
+    .nav-tab.active { background: var(--primary); color: white; }
+    @media (max-width: 768px) { .nav-tabs { flex-direction: column; } .nav-tab { border-radius: 15px; } }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Шапка -->
+    <div class="header">
+      <h1>🏔️ Geosense</h1>
+      <p>Ваш следующий горный маршрут начинается здесь</p>
+    </div>
+
+    <!-- Навигация -->
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showPage(0)">🏠 Главная</button>
+      <button class="nav-tab" onclick="showPage(1)">🗺️ Карта</button>
+      <button class="nav-tab" onclick="showPage(2)">🎒 Туры</button>
+    </div>
+
+    <!-- Страница 1: Главная -->
+    <div id="page-0" class="page active">
+      <div class="heading-accent">
+        <h2>Ваш следующий горный маршрут начинается здесь</h2>
+        <p>Иследуйте душу Востока</p>
+      </div>
+      
+      <div class="slider" id="imageSlider">
+        <div class="slide active" style="background-image: url('https://www.jotform.com/uploads/mkerimli2009/form_files/600_TOP-az-osen1.692add50390bc0.92797376.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="slide" style="background-image: url('https://www.jotform.com/uploads/mkerimli2009/form_files/f936fa1d4a0c9a7bfb2d85890d11c17f.692add6aa0e200.12317895.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="slide" style="background-image: url('https://www.jotform.com/uploads/mkerimli2009/form_files/610502ba-6152-463b-b270-8f507c73a3f4.692add72452f20.12640249.webp'); background-size: cover; background-position: center;"></div>
+        <div class="slide" style="background-image: url('https://www.jotform.com/uploads/mkerimli2009/form_files/Babadag_view_from_North.692ade67ec99a1.23755104.jpg'); background-size: cover; background-position: center;"></div>
+      </div>
+
+      <h2 style="text-align: center; color: var(--primary);">Топ лучших гор для туризма и отдыха</h2>
+      
+      <div class="tour-card">
+        <h3>1. Гора Шахдаг (Şahdağ)</h3>
+        <p><strong>Высота:</strong> 4243 м | <strong>Регион:</strong> Гусарский</p>
+        <p>Высочайший туристический потенциал. Подножие — Шахдагский зимне-летний туристический комплекс (крупнейший в стране горнолыжный курорт).</p>
+      </div>
+
+      <div class="tour-card">
+        <h3>2. Гора Бешбармаг (Beşbarmaq)</h3>
+        <p><strong>Высота:</strong> 382 м | <strong>Регион:</strong> Сияза́нский</p>
+        <p>Культовое, историческое и духовное значение. Является местом паломничества (Хыдыр Зинда). К вершине ведет тропа с информационными стендами.</p>
+      </div>
+    </div>
+
+    <!-- Страница 2: Карта -->
+    <div id="page-1" class="page">
+      <div class="heading-accent">
+        <h2>Карта</h2>
+      </div>
+      <div id="map" class="map-container">🗺️ Интерактивная карта Азербайджана (41.2, 47.4)<br>Горы Шахдаг, Бешбармаг, Базардюзю, Туфандаг</div>
+    </div>
+
+    <!-- Страница 3: Туры -->
+    <div id="page-2" class="page">
+      <div class="heading-accent">
+        <h2>Туры</h2>
+        <p>Изучите доступные, на данный, момент туры</p>
+      </div>
+
+      <div class="tour-card">
+        <h3>Тур: Туфандаг</h3>
+        <div class="tour-price">124 AZN</div>
+        <p>Горнолыжный спорт, сноубординг, аренда снаряжения, лыжные школы. Пешие прогулки (трекинг), прогулки на канатных дорогах.</p>
+        <button style="background: var(--primary); color: white; padding: 12px 24px; border: none; border-radius: 25px; font-size: 16px; cursor: pointer;">Забронировать</button>
+      </div>
+
+      <div class="tour-card">
+        <h3>Тур: «Путь Палецев» — Где Небо Слетается к Каспию</h3>
+        <div class="tour-price">53 AZN</div>
+        <p>Путешествие к Каменной Короне Азербайджана — легендарной горе Бешбармаг.</p>
+        <button style="background: var(--primary); color: white; padding: 12px 24px; border: none; border-radius: 25px; font-size: 16px; cursor: pointer;">Забронировать</button>
+      </div>
+
+      <div class="tour-card">
+        <h3>тур: «Шахдаг»-Зов вершины</h3>
+        <div class="tour-price">226 AZN</div>
+        <p>Катание на лыжах и сноутюбинг, сноубординг, прогулки на снегоходах, зимний каток.</p>
+        <button style="background: var(--primary); color: white; padding: 12px 24px; border: none; border-radius: 25px; font-size: 16px; cursor: pointer;">Забронировать</button>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial">
+          <p><strong>★★★★★</strong> "Самое удивительное навигационное приложение... Рекомендую всем!"</p>
+          <p><strong>— Равиль Аляутдинов</strong></p>
+        </div>
+        <div class="testimonial">
+          <p><strong>★★★★★</strong> "Я просто... водил. Долго. Горами. По пончам, в тишине... Иска́л правильный путь!"</p>
+          <p><strong>— Ryan G. (Водитель, простокен, и, да, буквальнo я)</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Навигация по страницам
+    function showPage(pageIndex) {
+      document.querySelectorAll('.page').forEach((page, i) => {
+        page.classList.toggle('active', i === pageIndex);
+      });
+      document.querySelectorAll('.nav-tab').forEach((tab, i) => {
+        tab.classList.toggle('active', i === pageIndex);
+      });
+    }
+
+    // Автослайдер
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+
+    // PWA функционал (оффлайн)
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+
+    // Кнопки бронирования (заглушки)
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('Бронирование доступно в полной версии Jotform App!');
+      });
+    });
+  </script>
+</body>
+</html>
